@@ -5,8 +5,8 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 const navLinks = [
   { label: "About", href: "#home" },
   { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#process" },
-  { label: "Skills", href: "#portfolio" },
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#clients" },
   {
     label: "Resume",
