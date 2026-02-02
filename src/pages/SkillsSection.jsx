@@ -10,8 +10,8 @@ import {
   SiReactrouter,
 } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
-import LogoLoop from "./LogoLoop";
-import StarBorder from "./StarBoarder";
+import LogoLoop from "@/components/LogoLoop";
+import StarBorder from "@/components/StarBorder";
 
 const Skills = () => {
   const skills = [
@@ -25,7 +25,7 @@ const Skills = () => {
 
   const tools = [
     { name: "Vite", icon: SiVite, color: "text-[#646CFF]" },
-    { name: "GitHub", icon: BsGithub, color: "text-black dark:text-white" },
+    { name: "GitHub", icon: BsGithub, color: "text-white" },
     { name: "NPM", icon: FaNpm, color: "text-[#CB3837]" },
   ];
 
@@ -47,9 +47,9 @@ const Skills = () => {
       <div
         className="
           w-20 h-20 flex items-center justify-center
-          border-2 border-[var(--border-main)]
+          border-2 border-[var(--color-border)]
           rounded-xl
-          bg-[var(--bg-sec)]
+          bg-[var(--color-secondary)]
           shadow-[0_6px_18px_rgba(248,223,145,0.35)]
           transition-all duration-300
           group-hover:shadow-[0_12px_30px_rgba(56,189,248,0.5)]
@@ -63,58 +63,63 @@ const Skills = () => {
   );
 
   return (
-    <section
-      id="skills"
-      className="
-        relative
-        mt-24
-        bg-[var(--bg-sec)]
-        border-2 border-[var(--border-main)]
-        rounded-2xl
-        p-10
-        space-y-14
-      "
-    >
-      {/* Section Header */}
-      <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold">Skills & Tools</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Technologies and tools I use to build modern, scalable, and
-          user-friendly web applications.
-        </p>
-      </div>
+    <section id="skills" className="relative mt-24">
+      {/* Container to match other sections */}
+      <div className="container mx-auto px-4 md:px-6">
+        <div
+          className="
+          bg-[var(--color-background)]
+          text-[var(--color-foreground)]
+          rounded-2xl
+          p-10
+          space-y-14
+          max-w-5xl
+          mx-auto
+        "
+        >
+          {/* Section Header */}
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl font-bold">Skills & Tools</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Technologies and tools I use to build modern, scalable, and
+              user-friendly web applications.
+            </p>
+          </div>
 
-      {/* Skills */}
-      <div className="space-y-6">
-        <h3 className="text-xl font-semibold">Core Skills</h3>
-        <div className="flex flex-wrap gap-8">{skills.map(renderSkill)}</div>
-      </div>
+          {/* Skills */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold">Core Skills</h3>
+            <div className="flex flex-wrap gap-8">
+              {skills.map(renderSkill)}
+            </div>
+          </div>
 
-      {/* Tools */}
-      <div className="space-y-6">
-        <h3 className="text-xl font-semibold">Tools & Software</h3>
-        <div className="flex flex-wrap gap-8">{tools.map(renderSkill)}</div>
-      </div>
+          {/* Tools */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold">Tools & Software</h3>
+            <div className="flex flex-wrap gap-8">{tools.map(renderSkill)}</div>
+          </div>
 
-      {/* Logo Loop Highlight */}
-      <div className="pt-8">
-        <StarBorder className="w-full" color="cyan" speed="3s">
-          <LogoLoop
-            logos={techLogos}
-            speed={120}
-            direction="left"
-            logoHeight={48}
-            gap={40}
-            pauseOnHover
-            scaleOnHover
-            fadeOut
-            fadeOutColor="var(--bg-sec)"
-            ariaLabel="Technology logos"
-          />
-        </StarBorder>
+          {/* Logo Loop Highlight */}
+          <div className="pt-8">
+            <StarBorder className="w-full" color="cyan" speed="3s">
+              <LogoLoop
+                logos={techLogos}
+                speed={120}
+                direction="left"
+                logoHeight={48}
+                gap={40}
+                pauseOnHover
+                scaleOnHover
+                fadeOut
+                fadeOutColor="var(--color-background)"
+                ariaLabel="Technology logos"
+              />
+            </StarBorder>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
-
 export default Skills;
