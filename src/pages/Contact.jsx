@@ -66,15 +66,17 @@ const Contact = () => {
               </p>
 
               <a
-                href="mailto:priyankakoorakula@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=priyankakoorakula@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
-                  inline-flex items-center gap-2
-                  bg-primary text-primary-foreground
-                  px-6 py-3 rounded-lg
-                  font-semibold
-                  transition-all duration-300
-                  hover:scale-105
-                "
+    inline-flex items-center gap-2
+    bg-primary text-primary-foreground
+    px-6 py-3 rounded-lg
+    font-semibold
+    transition-all duration-300
+    hover:scale-105
+  "
               >
                 Say Hello
                 <ArrowRight className="w-4 h-4" />
