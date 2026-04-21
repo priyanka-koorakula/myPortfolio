@@ -40,6 +40,20 @@ const projects = [
     ],
     tech: ["React.js", "JavaScript", "CSS", "API Integration"],
   },
+  {
+    title: "Voltino Systems",
+    subtitle: "Freelance Client Website",
+    description:
+      "Developed and deployed a production-ready corporate website for Voltino Systems using React.js and Tailwind CSS, delivering a fully responsive and modern user experience.",
+    highlights: [
+      "Implemented WhatsApp integration, Google Maps navigation, and click-to-call functionality",
+      "Delivered a fully responsive and modern user interface",
+      "Collaborated with the client to gather requirements and iterate on feedback",
+      "Deployed a polished, user-focused production solution",
+    ],
+    tech: ["React.js", "Tailwind CSS", "Deployment"],
+    liveLink: "https://www.voltinosystems.com/",
+  },
 ];
 
 export function ProjectsSection() {
@@ -125,16 +139,28 @@ export function ProjectsSection() {
                   ))}
                 </div>
 
-                {/* Placeholder CTAs (can link later) */}
+                {/* CTAs */}
                 <div className="flex items-center gap-4 pt-6 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2 hover:text-primary transition">
                     <Code className="w-4 h-4" />
                     <span>Code</span>
                   </div>
-                  <div className="flex items-center gap-2 hover:text-primary transition">
-                    <ExternalLink className="w-4 h-4" />
-                    <span>Live</span>
-                  </div>
+                  {project.liveLink ? (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 hover:text-primary transition"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Live</span>
+                    </a>
+                  ) : (
+                    <div className="flex items-center gap-2 hover:text-primary transition">
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Live</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

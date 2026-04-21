@@ -47,7 +47,7 @@ export function HeroSection() {
 
           {/* About text */}
           <p className="leading-relaxed text-base md:text-lg">
-            With over a 2 years of professional experience, I specialize in
+            With over a 2.5+ years of professional experience, I specialize in
             building <strong>responsive</strong> and{" "}
             <strong>high-performance</strong> applications using{" "}
             <strong>React.js</strong>, <strong>JavaScript</strong>,{" "}
@@ -71,8 +71,62 @@ export function HeroSection() {
           </p>
         </div>
 
+        {/* AI & Vibe Coding */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">AI-Powered Workflow</h2>
+          <div
+            className="
+              group relative
+              p-8 rounded-2xl
+              border border-white/20
+              bg-white/5 backdrop-blur-md
+              transition-all duration-500 ease-out
+              hover:-translate-y-2
+              hover:shadow-[0_20px_60px_-15px_rgba(56,189,248,0.4)]
+              hover:border-primary/60
+            "
+          >
+            <div
+              className="
+                absolute inset-0 rounded-2xl
+                bg-gradient-to-r from-primary/10 via-cyan-400/10 to-primary/10
+                opacity-0 blur-xl group-hover:opacity-100
+                transition-opacity duration-500 pointer-events-none
+              "
+            />
+            <div className="relative z-10">
+              <p className="text-gray-300 leading-relaxed mb-6">
+                I leverage <strong className="text-white">AI tools</strong> to supercharge my development workflow — writing faster,
+                debugging smarter, and shipping higher-quality code. I'm proficient at{" "}
+                <strong className="text-white">vibe coding</strong>: using AI as a creative and technical co-pilot to rapidly
+                prototype ideas and iterate with confidence.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { name: "ChatGPT", desc: "Problem-solving & ideation" },
+                  { name: "Claude", desc: "Code review & architecture" },
+                  { name: "GitHub Copilot", desc: "In-editor AI completions" },
+                  { name: "Antigravity", desc: "AI-accelerated development" },
+                ].map((tool) => (
+                  <div
+                    key={tool.name}
+                    className="
+                      flex flex-col px-4 py-3 rounded-xl
+                      bg-primary/10 border border-primary/20
+                      hover:bg-primary/20 transition-colors duration-300
+                    "
+                  >
+                    <span className="text-primary font-semibold text-sm">{tool.name}</span>
+                    <span className="text-gray-400 text-xs mt-0.5">{tool.desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* What I Do */}
-        <div className="max-w-4xl mx-auto mt-24">
+        <div className="max-w-4xl mx-auto mt-16">
           <h2 className="text-3xl font-bold mb-12 text-center">What I Do</h2>
 
           <div
